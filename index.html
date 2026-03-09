@@ -2,345 +2,259 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Kalish</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jason Kalish</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 56px 28px 56px 28px;
-      line-height: 1.7;
-      color: #232629;
-      background: #f6f4f0;
-      font-size: 18px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-    .page {
-      max-width: 820px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+<style>
 
-    .top-band {
-      background: #fbfaf7;
-      border: 1px solid #e3ddd5;
-      border-radius: 18px;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-      padding: 18px 22px;
-    }
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+margin:0;
+padding:56px 28px;
+background:#f6f4f0;
+color:#232629;
+font-size:18px;
+line-height:1.7;
+}
 
-    .top-band-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      max-width: 760px;
-    }
+.page {
+max-width:820px;
+margin:0 auto;
+display:flex;
+flex-direction:column;
+gap:24px;
+}
 
-    .card {
-      background: #fbfaf7;
-      border: 1px solid #e3ddd5;
-      border-radius: 20px;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-    }
+.card {
+background:#fbfaf7;
+border:1px solid #e3ddd5;
+border-radius:20px;
+padding:32px;
+}
 
-    .hero-card {
-      padding: 44px 40px;
-    }
+.top-band {
+background:#fbfaf7;
+border:1px solid #e3ddd5;
+border-radius:18px;
+padding:18px 22px;
+}
 
-    .section-card {
-      padding: 28px 30px;
-    }
+.band-title {
+font-size:14px;
+letter-spacing:.06em;
+text-transform:uppercase;
+color:#6c737a;
+font-weight:600;
+margin:0 0 4px 0;
+}
 
-    .ask-card {
-      padding: 28px 30px;
-    }
+h1 {
+font-family:'Libre Baskerville', serif;
+font-size:56px;
+margin:0;
+line-height:1.05;
+font-weight:400;
+}
 
-    .hero-inner,
-    .section-inner,
-    .ask-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+.headline {
+font-family:'Libre Baskerville', serif;
+font-size:28px;
+margin:0;
+color:#2e3338;
+}
 
-    .band-title {
-      font-size: 14px;
-      margin: 0;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #6c737a;
-    }
+h2 {
+font-size:20px;
+margin:0 0 10px 0;
+}
 
-    .eyebrow {
-      margin: 0;
-      font-size: 15px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #444b52;
-      font-weight: 600;
-    }
+p {
+margin:0;
+max-width:640px;
+}
 
-    h1 {
-      font-family: 'Libre Baskerville', Georgia, serif;
-      font-size: 58px;
-      line-height: 1.02;
-      margin: 0;
-      font-weight: 400;
-      color: #181b1e;
-    }
+.subtle {
+color:#737980;
+font-size:16px;
+}
 
-    .headline {
-      font-family: 'Libre Baskerville', Georgia, serif;
-      font-size: 28px;
-      line-height: 1.28;
-      font-weight: 400;
-      margin: 0;
-      max-width: 720px;
-      color: #2e3338;
-    }
+.ask-summary {
+color:#4a4f55;
+}
 
-    h2 {
-      font-size: 20px;
-      margin: 0 0 10px 0;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: #2a2f34;
-    }
+.ask-row {
+display:flex;
+gap:10px;
+margin-top:10px;
+flex-wrap:wrap;
+}
 
-    p {
-      margin: 0;
-      max-width: 640px;
-    }
+.ask-input {
+flex:1;
+min-width:240px;
+border:1px solid #d8d2ca;
+border-radius:10px;
+padding:12px;
+font-size:15px;
+background:#fffdf9;
+}
 
-    .subtle {
-      color: #737980;
-      font-size: 16px;
-      line-height: 1.55;
-    }
+.ask-button {
+border:1px solid #d8d2ca;
+background:#fffdf9;
+padding:10px 16px;
+border-radius:10px;
+cursor:pointer;
+}
 
-    a {
-      color: #4f6478;
-      text-decoration: none;
-    }
+footer {
+text-align:center;
+font-size:15px;
+color:#7a7f85;
+margin-top:10px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a {
+color:#4f6478;
+text-decoration:none;
+}
 
-    .ask-summary {
-      color: #4a4f55;
-      font-size: 16px;
-      line-height: 1.55;
-      max-width: 680px;
-    }
+a:hover {
+text-decoration:underline;
+}
 
-    .ask-row {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+@media (max-width:640px) {
 
-    .ask-input {
-      flex: 1 1 360px;
-      min-width: 220px;
-      box-sizing: border-box;
-      border: 1px solid #d8d2ca;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 15px;
-      font-family: inherit;
-      color: #232629;
-      background: #fffdf9;
-    }
+body {
+padding:40px 20px;
+font-size:17px;
+}
 
-    .ask-input:focus {
-      outline: none;
-      border-color: #b7c1cb;
-      box-shadow: 0 0 0 3px rgba(79, 100, 120, 0.08);
-    }
+h1 {
+font-size:40px;
+}
 
-    .ask-button {
-      display: inline-block;
-      border: 1px solid #d8d2ca;
-      border-radius: 12px;
-      padding: 10px 16px;
-      background: #fffdf9;
-      color: #2b3136;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      font-family: inherit;
-    }
+.headline {
+font-size:24px;
+}
 
-    .ask-button:hover {
-      background: #f7f3ed;
-    }
+.card {
+padding:24px;
+}
 
-    footer {
-      margin-top: 12px;
-      padding-top: 8px;
-      color: #7a7f85;
-      font-size: 15px;
-      text-align: center;
-    }
+.ask-row {
+flex-direction:column;
+}
 
-    @media (max-width: 640px) {
-      body {
-        padding: 40px 20px 40px 20px;
-        font-size: 17px;
-      }
+.ask-button {
+width:100%;
+}
 
-      .card,
-      .top-band {
-        border-radius: 16px;
-      }
+}
 
-      .hero-card {
-        padding: 30px 22px;
-      }
-
-      .section-card,
-      .ask-card {
-        padding: 22px 22px;
-      }
-
-      .top-band {
-        padding: 16px 18px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .headline {
-        font-size: 24px;
-      }
-
-      p {
-        max-width: 100%;
-      }
-
-      .ask-row {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .ask-button {
-        width: 100%;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <div class="page">
+<div class="page">
 
-    <div class="top-band">
-      <div class="top-band-inner">
-        <p class="band-title">About this site</p>
-        <p class="subtle">
-          This is a more personal complement to LinkedIn — a place to share a bit more about my work, how I think, and the things I spend time on outside of work.
-        </p>
-      </div>
-    </div>
+<div class="top-band">
+<p class="band-title">About this site</p>
+<p class="subtle">
+This is a more personal complement to LinkedIn — a place to share a bit more about my work, how I think, and the things I spend time on outside of work.
+</p>
+</div>
 
-    <div class="card hero-card">
-      <div class="hero-inner">
-        <p class="eyebrow">Welcome</p>
+<div class="card">
 
-        <h1>Jason Kalish</h1>
+<p class="subtle">Welcome</p>
 
-        <p class="headline">
-          Supporting the people who make everyday living work.
-        </p>
+<h1>Jason Kalish</h1>
 
-        <p>
-          I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
-        </p>
+<p class="headline">
+Supporting the people who make everyday living work.
+</p>
 
-        <p>
-          Outside of work I spend a lot of time running, reading, and keeping up with family life.
-        </p>
-      </div>
-    </div>
+<p>
+I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
+</p>
 
-    <div class="card ask-card">
-      <div class="ask-inner">
-        <h2>Ask</h2>
+<p>
+Outside of work I spend a lot of time running, reading, and keeping up with family life.
+</p>
 
-        <p class="ask-summary">
-          You can ask about books, fitness, nutrition, skiing, travel, leadership style, or parenting considerations.
-        </p>
+</div>
 
-        <div class="ask-row">
-          <input class="ask-input" type="text" placeholder="Ask a question..." aria-label="Ask a question">
-          <button class="ask-button" type="button">Ask</button>
-        </div>
+<div class="card">
 
-        <p class="subtle">
-          Books & reading · Fitness, running & endurance training · Nutrition & my smoothie · Skiing · Places I’ve visited · Leadership style & building teams · Parenting considerations
-        </p>
-      </div>
-    </div>
+<h2>Approach</h2>
 
-    <div class="card section-card">
-      <div class="section-inner">
-        <h2>Approach</h2>
+<p>
+My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
+</p>
 
-        <p>
-          My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
-        </p>
+<p>
+I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
+</p>
 
-        <p>
-          I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
-        </p>
+<p>
+The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
+</p>
 
-        <p>
-          The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
-        </p>
-      </div>
-    </div>
+</div>
 
-    <div class="card section-card">
-      <div class="section-inner">
-        <h2>Where you can find me now</h2>
+<div class="card">
 
-        <p>
-          LinkedIn provides my full professional background and current role.
-        </p>
+<h2>Ask</h2>
 
-        <p>
-          <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">Visit LinkedIn →</a>
-        </p>
-      </div>
-    </div>
+<p class="ask-summary">
+Books I’ve enjoyed, running and training, nutrition (including my smoothie recipe and blenders), skiing, places I’ve visited, leadership, family life — or sports, including the 1985 Cardinals (though I probably won’t be much help in a hockey debate).
+</p>
 
-    <div class="card section-card">
-      <div class="section-inner">
-        <h2>Contact</h2>
+<div class="ask-row">
+<input class="ask-input" type="text" placeholder="Curious about something?">
+<button class="ask-button">Ask</button>
+</div>
 
-        <p>
-          <a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
-        </p>
-      </div>
-    </div>
+</div>
 
-    <footer>
-      Jason Kalish
-    </footer>
+<div class="card">
 
-  </div>
+<h2>Where you can find me now</h2>
+
+<p>
+LinkedIn provides my full professional background and current role.
+</p>
+
+<p>
+<a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank">
+Visit LinkedIn →
+</a>
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Contact</h2>
+
+<p>
+<a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
+</p>
+
+</div>
+
+<footer>
+Jason Kalish
+</footer>
+
+</div>
 
 </body>
-
 </html>
