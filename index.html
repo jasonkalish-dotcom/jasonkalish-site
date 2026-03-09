@@ -12,8 +12,7 @@
   <style>
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      max-width: 920px;
-      margin: 0 auto;
+      margin: 0;
       padding: 56px 28px 56px 28px;
       line-height: 1.7;
       color: #232629;
@@ -21,10 +20,25 @@
       font-size: 18px;
     }
 
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 40px;
+      align-items: start;
+    }
+
     main {
       display: flex;
       flex-direction: column;
       gap: 24px;
+      min-width: 0;
+    }
+
+    aside {
+      position: sticky;
+      top: 32px;
     }
 
     section {
@@ -48,28 +62,21 @@
     }
 
     .hero-inner,
-    .section-inner {
+    .section-inner,
+    .side-inner {
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
 
-.eyebrow {
-  margin: 0;
-  font-size: 15px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #444b52;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 20px;
-  margin: 0 0 10px 0;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #2a2f34;
-}
+    .eyebrow {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #444b52;
+      font-weight: 600;
+    }
 
     h1 {
       font-family: 'Libre Baskerville', Georgia, serif;
@@ -91,12 +98,11 @@ h2 {
     }
 
     h2 {
-      font-size: 13px;
-      margin: 0 0 4px 0;
+      font-size: 20px;
+      margin: 0 0 10px 0;
       font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #737980;
+      letter-spacing: 0.02em;
+      color: #2a2f34;
     }
 
     p {
@@ -118,12 +124,52 @@ h2 {
       font-size: 16px;
     }
 
+    .side-card {
+      background: #fbfaf7;
+      border: 1px solid #e3ddd5;
+      border-radius: 20px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+      padding: 22px 22px;
+    }
+
+    .side-title {
+      font-size: 14px;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #6c737a;
+    }
+
+    .side-link {
+      font-size: 17px;
+      font-weight: 500;
+      color: #2b3136;
+    }
+
+    .side-meta {
+      font-size: 15px;
+      color: #737980;
+      line-height: 1.5;
+    }
+
     footer {
       margin-top: 36px;
       padding-top: 8px;
       color: #7a7f85;
       font-size: 15px;
       text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      aside {
+        position: static;
+      }
     }
 
     @media (max-width: 640px) {
@@ -136,7 +182,8 @@ h2 {
         gap: 18px;
       }
 
-      .card {
+      .card,
+      .side-card {
         border-radius: 16px;
       }
 
@@ -165,83 +212,104 @@ h2 {
 
 <body>
 
-  <main>
+  <div class="page">
 
-    <section>
-      <div class="card hero-card">
-        <div class="hero-inner">
-          <p class="eyebrow">Welcome</p>
+    <main>
 
-          <h1>Jason Kalish</h1>
+      <section>
+        <div class="card hero-card">
+          <div class="hero-inner">
+            <p class="eyebrow">Welcome</p>
 
-          <p class="headline">
-            Supporting the people who make everyday living work.
-          </p>
+            <h1>Jason Kalish</h1>
 
-          <p>
-            I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
-          </p>
+            <p class="headline">
+              Supporting the people who make everyday living work.
+            </p>
 
-          <p>
-            Outside of work I spend a lot of time running, reading, and keeping up with family life.
-          </p>
+            <p>
+              I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
+            </p>
+
+            <p>
+              Outside of work I spend a lot of time running, reading, and keeping up with family life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card section-card">
+          <div class="section-inner">
+            <h2>Approach</h2>
+
+            <p>
+              My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
+            </p>
+
+            <p>
+              I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
+            </p>
+
+            <p>
+              The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card section-card">
+          <div class="section-inner">
+            <h2>Where you can find me now</h2>
+
+            <p>
+              LinkedIn provides my full professional background and current role.
+            </p>
+
+            <p>
+              <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">Visit LinkedIn →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card section-card">
+          <div class="section-inner">
+            <h2>Contact</h2>
+
+            <p>
+              <a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Jason Kalish
+      </footer>
+
+    </main>
+
+    <aside>
+      <div class="side-card">
+        <div class="side-inner">
+          <p class="side-title">Elsewhere</p>
+
+          <a class="side-link" href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <p class="side-meta">Professional background and current role.</p>
+
+          <a class="side-link" href="mailto:hello@jasonkalish.co">Email</a>
+          <p class="side-meta">The best way to reach me directly.</p>
+
+          <a class="side-link" href="/app.html">Workspace</a>
+          <p class="side-meta">Private notes, daily focus, and AI-assisted thinking.</p>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <section>
-      <div class="card section-card">
-        <div class="section-inner">
-          <h2>Approach</h2>
-
-          <p>
-            My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
-          </p>
-
-          <p>
-            I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
-          </p>
-
-          <p>
-            The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="card section-card">
-        <div class="section-inner">
-          <h2>Where you can find me now</h2>
-
-          <p>
-            <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </p>
-
-          <p class="subtle">
-            Professional background and current role
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="card section-card">
-        <div class="section-inner">
-          <h2>Contact</h2>
-
-          <p>
-            <a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    Jason Kalish
-  </footer>
+  </div>
 
 </body>
 
