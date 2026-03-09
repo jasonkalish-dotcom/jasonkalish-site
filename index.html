@@ -24,34 +24,36 @@
     main {
       display: flex;
       flex-direction: column;
-      gap: 84px;
+      gap: 32px;
     }
 
     section {
       display: flex;
       flex-direction: column;
-      gap: 18px;
     }
 
-    section + section {
-      padding-top: 18px;
-      border-top: 1px solid #d8cec2;
-    }
-
-    .hero {
-      border-top: none;
-      padding-top: 0;
-    }
-
-    .hero-inner {
-      background: #efe6db;
+    .hero-card,
+    .section-card {
       border: 1px solid #d8cec2;
-      padding: 42px 38px;
       border-radius: 22px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    .hero-card {
+      background: #efe6db;
+      padding: 42px 38px;
+    }
+
+    .section-card {
+      background: #f8f4ee;
+      padding: 30px 32px;
+    }
+
+    .hero-inner,
+    .section-inner {
       display: flex;
       flex-direction: column;
       gap: 18px;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
     }
 
     .eyebrow {
@@ -86,7 +88,7 @@
 
     h2 {
       font-size: 14px;
-      margin: 0 0 6px 0;
+      margin: 0 0 4px 0;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -113,11 +115,11 @@
     }
 
     footer {
-      margin-top: 84px;
-      padding-top: 24px;
-      border-top: 1px solid #d8cec2;
+      margin-top: 36px;
+      padding-top: 12px;
       color: #7a6b5e;
       font-size: 15px;
+      text-align: center;
     }
 
     @media (max-width: 640px) {
@@ -127,12 +129,20 @@
       }
 
       main {
-        gap: 60px;
+        gap: 22px;
       }
 
-      .hero-inner {
-        padding: 28px 22px;
+      .hero-card,
+      .section-card {
         border-radius: 18px;
+      }
+
+      .hero-card {
+        padding: 28px 22px;
+      }
+
+      .section-card {
+        padding: 24px 22px;
       }
 
       h1 {
@@ -154,60 +164,74 @@
 
   <main>
 
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">Welcome</p>
+    <section>
+      <div class="hero-card">
+        <div class="hero-inner">
+          <p class="eyebrow">Welcome</p>
 
-        <h1>Jason Kalish</h1>
+          <h1>Jason Kalish</h1>
 
-        <p class="headline">
-          Supporting the people who make everyday living work.
-        </p>
+          <p class="headline">
+            Supporting the people who make everyday living work.
+          </p>
 
-        <p>
-          I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
-        </p>
+          <p>
+            I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
+          </p>
 
-        <p>
-          Outside of work I spend a lot of time running, reading, and keeping up with family life.
-        </p>
+          <p>
+            Outside of work I spend a lot of time running, reading, and keeping up with family life.
+          </p>
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>Approach</h2>
+      <div class="section-card">
+        <div class="section-inner">
+          <h2>Approach</h2>
 
-      <p>
-        My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
-      </p>
+          <p>
+            My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
+          </p>
 
-      <p>
-        I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
-      </p>
+          <p>
+            I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
+          </p>
 
-      <p>
-        The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
-      </p>
+          <p>
+            The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Where you can find me now</h2>
+      <div class="section-card">
+        <div class="section-inner">
+          <h2>Where you can find me now</h2>
 
-      <p>
-        <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </p>
+          <p>
+            <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
 
-      <p class="subtle">
-        Professional background and current role
-      </p>
+          <p class="subtle">
+            Professional background and current role
+          </p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Contact</h2>
+      <div class="section-card">
+        <div class="section-inner">
+          <h2>Contact</h2>
 
-      <p>
-        <a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
-      </p>
+          <p>
+            <a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
+          </p>
+        </div>
+      </div>
     </section>
 
   </main>
