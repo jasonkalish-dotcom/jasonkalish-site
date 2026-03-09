@@ -26,10 +26,15 @@
     }
 
     section {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+section + section {
+  padding-top: 12px;
+  border-top: 1px solid #ddd8d2;
+}
 
     h1 {
       font-size: 52px;
