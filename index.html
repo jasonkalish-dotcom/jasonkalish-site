@@ -1,90 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="icon" href="/favicon.ico">
-<title>Jason Kalish</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial;
-max-width: 720px;
-margin: 120px auto;
-padding: 0 24px;
-line-height: 1.7;
-color: #1a1a1a;
-background: #f7f7f5;
-font-size: 18px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Kalish</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-h1 {
-font-size: 44px;
-margin-bottom: 8px;
-font-weight: 600;
-}
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      max-width: 760px;
+      margin: 96px auto;
+      padding: 0 24px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f7f7f5;
+      font-size: 18px;
+    }
 
-h2 {
-margin-top: 60px;
-margin-bottom: 10px;
-font-size: 20px;
-font-weight: 600;
-}
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+    }
 
-p {
-margin-bottom: 18px;
-}
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
 
-a {
-color: #1F3A5F;
-text-decoration: none;
-}
+    h1 {
+      font-size: 52px;
+      line-height: 1.05;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
 
-a:hover {
-text-decoration: underline;
-}
-</style>
+    .headline {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 600;
+      margin: 0;
+      max-width: 640px;
+    }
 
+    h2 {
+      font-size: 16px;
+      line-height: 1.2;
+      margin: 0 0 4px 0;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    p {
+      margin: 0;
+      max-width: 680px;
+    }
+
+    a {
+      color: #1F3A5F;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .subtle {
+      color: #666;
+      font-size: 16px;
+    }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid #ddd8d2;
+      color: #666;
+      font-size: 15px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        margin: 48px auto;
+        padding: 0 20px;
+        font-size: 17px;
+      }
+
+      main {
+        gap: 56px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .headline {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <main>
+    <section>
+      <h1>Jason Kalish</h1>
+      <p class="headline">Supporting the people who make everyday living work.</p>
+      <p>
+        I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
+      </p>
+      <p>
+        Outside of work I spend a lot of time running, reading, and keeping up with family life.
+      </p>
+    </section>
 
-<h1>Jason Kalish</h1>
+    <section>
+      <div>
+        <h2>Approach</h2>
+      </div>
+      <p>
+        My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning communication, accountability, and decision-making so teams can execute consistently.
+      </p>
+      <p>
+        I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas.
+      </p>
+      <p>
+        The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
+      </p>
+    </section>
 
-<p><strong>Supporting the people who make everyday living work.</strong></p>
+    <section>
+      <div>
+        <h2>Where to find me now</h2>
+      </div>
+      <p>
+        <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+      <p class="subtle">Professional background and current role.</p>
+    </section>
 
-<p>
-I work in large-scale real estate, supporting the legal and operational work that helps housing run safely, reliably, and in ways that reflect how people actually live.
-</p>
+    <section>
+      <div>
+        <h2>Contact</h2>
+      </div>
+      <p>
+        <a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
+      </p>
+    </section>
+  </main>
 
-<p>
-Outside of work I spend a lot of time running, reading, and keeping up with family life.
-</p>
-
-<h2>Approach</h2>
-
-<p>
-My work focuses on helping complex organizations operate more clearly and effectively. That often means aligning strategy, communication, and accountability so teams can make better decisions and execute consistently.
-</p>
-
-<p>
-I believe strongly in continuous learning and practical tools that improve thinking. One of those tools today is AI. It is widely accessible and increasingly useful for research, synthesis, and exploring ideas. The difference is not access to the tool — anyone can use it — but how thoughtfully people engage with it.
-</p>
-
-<h2>Where you can find me now</h2>
-
-<p>
-For a full professional background and current role, you can find me on
-<a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank">LinkedIn</a>.
-</p>
-
-<h2>Contact</h2>
-
-<p>
-<a href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>
-</p>
-
+  <footer>
+    Jason Kalish
+  </footer>
 </body>
 </html>
-<p style="margin-top:60px;color:#555;">
-Thanks for visiting.
-</p>
