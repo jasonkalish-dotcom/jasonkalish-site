@@ -24,8 +24,8 @@
       max-width: 1120px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 720px) 240px;
-      gap: 40px;
+      grid-template-columns: minmax(0, 720px) 260px;
+      gap: 36px;
       align-items: start;
     }
 
@@ -39,6 +39,9 @@
     aside {
       position: sticky;
       top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
 
     section {
@@ -61,12 +64,20 @@
       padding: 28px 30px;
     }
 
+    .side-card {
+      padding: 22px 22px;
+    }
+
     .hero-inner,
     .section-inner,
     .side-inner {
       display: flex;
       flex-direction: column;
       gap: 18px;
+    }
+
+    .side-inner.tight {
+      gap: 12px;
     }
 
     .eyebrow {
@@ -105,33 +116,6 @@
       color: #2a2f34;
     }
 
-    p {
-      margin: 0;
-      max-width: 640px;
-    }
-
-    a {
-      color: #4f6478;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .subtle {
-      color: #737980;
-      font-size: 16px;
-    }
-
-    .side-card {
-      background: #fbfaf7;
-      border: 1px solid #e3ddd5;
-      border-radius: 20px;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-      padding: 22px 22px;
-    }
-
     .side-title {
       font-size: 14px;
       margin: 0;
@@ -141,16 +125,79 @@
       color: #6c737a;
     }
 
+    p {
+      margin: 0;
+      max-width: 640px;
+    }
+
+    .subtle {
+      color: #737980;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
     .side-link {
       font-size: 17px;
       font-weight: 500;
       color: #2b3136;
+      text-decoration: none;
     }
 
-    .side-meta {
+    a {
+      color: #4f6478;
+      text-decoration: none;
+    }
+
+    a:hover,
+    .side-link:hover {
+      text-decoration: underline;
+    }
+
+    .ask-topics {
+      margin: 0;
+      padding-left: 18px;
+      color: #4a4f55;
       font-size: 15px;
-      color: #737980;
-      line-height: 1.5;
+      line-height: 1.55;
+    }
+
+    .ask-topics li {
+      margin: 0 0 4px 0;
+    }
+
+    .ask-input {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #d8d2ca;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 15px;
+      font-family: inherit;
+      color: #232629;
+      background: #fffdf9;
+    }
+
+    .ask-input:focus {
+      outline: none;
+      border-color: #b7c1cb;
+      box-shadow: 0 0 0 3px rgba(79, 100, 120, 0.08);
+    }
+
+    .ask-button {
+      display: inline-block;
+      border: 1px solid #d8d2ca;
+      border-radius: 12px;
+      padding: 10px 14px;
+      background: #fffdf9;
+      color: #2b3136;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .ask-button:hover {
+      background: #f7f3ed;
     }
 
     footer {
@@ -182,8 +229,7 @@
         gap: 18px;
       }
 
-      .card,
-      .side-card {
+      .card {
         border-radius: 16px;
       }
 
@@ -191,7 +237,8 @@
         padding: 30px 22px;
       }
 
-      .section-card {
+      .section-card,
+      .side-card {
         padding: 22px 22px;
       }
 
@@ -293,20 +340,46 @@
     </main>
 
     <aside>
-      <div class="side-card">
+
+      <div class="card side-card">
         <div class="side-inner">
-          <p class="side-title">Elsewhere</p>
+          <p class="side-title">About this site</p>
+
+          <p class="subtle">
+            This is a more personal complement to LinkedIn — a place to share a bit more about my work, how I think, and the things I spend time on outside of work.
+          </p>
 
           <a class="side-link" href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <p class="side-meta">Professional background and current role.</p>
-
           <a class="side-link" href="mailto:hello@jasonkalish.co">Email</a>
-          <p class="side-meta">The best way to reach me directly.</p>
-
-          <a class="side-link" href="/app.html">Workspace</a>
-          <p class="side-meta">Private notes, daily focus, and AI-assisted thinking.</p>
         </div>
       </div>
+
+      <div class="card side-card">
+        <div class="side-inner tight">
+          <p class="side-title">Ask</p>
+
+          <p class="subtle">
+            Ask about books, running, nutrition, skiing, or places I’ve visited.
+          </p>
+
+          <ul class="ask-topics">
+            <li>Books & reading</li>
+            <li>Running & endurance training</li>
+            <li>Nutrition & my smoothie</li>
+            <li>Skiing</li>
+            <li>Places I’ve visited</li>
+          </ul>
+
+          <input class="ask-input" type="text" placeholder="Ask a question..." aria-label="Ask a question">
+
+          <button class="ask-button" type="button">Ask</button>
+
+          <p class="subtle">
+            This feature will eventually answer only questions about the topics above.
+          </p>
+        </div>
+      </div>
+
     </aside>
 
   </div>
