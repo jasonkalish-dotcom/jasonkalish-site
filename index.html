@@ -29,6 +29,22 @@
       align-items: start;
     }
 
+    .top-band {
+      grid-column: 1 / -1;
+      background: #fbfaf7;
+      border: 1px solid #e3ddd5;
+      border-radius: 18px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+      padding: 18px 22px;
+    }
+
+    .top-band-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 780px;
+    }
+
     main {
       display: flex;
       flex-direction: column;
@@ -87,6 +103,15 @@
       text-transform: uppercase;
       color: #444b52;
       font-weight: 600;
+    }
+
+    .band-title {
+      font-size: 14px;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #6c737a;
     }
 
     h1 {
@@ -229,7 +254,8 @@
         gap: 18px;
       }
 
-      .card {
+      .card,
+      .top-band {
         border-radius: 16px;
       }
 
@@ -240,6 +266,10 @@
       .section-card,
       .side-card {
         padding: 22px 22px;
+      }
+
+      .top-band {
+        padding: 16px 18px;
       }
 
       h1 {
@@ -260,6 +290,15 @@
 <body>
 
   <div class="page">
+
+    <div class="top-band">
+      <div class="top-band-inner">
+        <p class="band-title">About this site</p>
+        <p class="subtle">
+          This is a more personal complement to LinkedIn — a place to share a bit more about my work, how I think, and the things I spend time on outside of work.
+        </p>
+      </div>
+    </div>
 
     <main>
 
@@ -342,32 +381,21 @@
     <aside>
 
       <div class="card side-card">
-        <div class="side-inner">
-          <p class="side-title">About this site</p>
-
-          <p class="subtle">
-            This is a more personal complement to LinkedIn — a place to share a bit more about my work, how I think, and the things I spend time on outside of work.
-          </p>
-
-          <a class="side-link" href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="side-link" href="mailto:hello@jasonkalish.co">Email</a>
-        </div>
-      </div>
-
-      <div class="card side-card">
         <div class="side-inner tight">
           <p class="side-title">Ask</p>
 
           <p class="subtle">
-            Ask about books, running, nutrition, skiing, or places I’ve visited.
+            Ask about books, fitness, nutrition, skiing, travel, leadership style, or parenting considerations.
           </p>
 
           <ul class="ask-topics">
             <li>Books & reading</li>
-            <li>Running & endurance training</li>
+            <li>Fitness, running & endurance training</li>
             <li>Nutrition & my smoothie</li>
             <li>Skiing</li>
             <li>Places I’ve visited</li>
+            <li>Leadership style & building teams</li>
+            <li>Parenting considerations</li>
           </ul>
 
           <input class="ask-input" type="text" placeholder="Ask a question..." aria-label="Ask a question">
@@ -377,6 +405,9 @@
           <p class="subtle">
             This feature will eventually answer only questions about the topics above.
           </p>
+
+          <a class="side-link" href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="side-link" href="mailto:hello@jasonkalish.co">Email</a>
         </div>
       </div>
 
