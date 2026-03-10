@@ -265,6 +265,46 @@ footer{
     width:100%;
   }
 }
+.ask-button,
+.connect-button{
+width:100%;
+}
+
+}
+
+/* ---------- micro-interactions ---------- */
+
+.card {
+transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.page:hover {
+border-left-color: #cfc7bc;
+}
+
+.ask-button,
+.connect-button {
+transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+}
+
+.ask-button:hover,
+.connect-button:hover {
+transform: translateY(-1px);
+box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.ask-button:active,
+.connect-button:active {
+transform: translateY(0);
+box-shadow: none;
+}
+
+</style>
 </style>
 </head>
 
