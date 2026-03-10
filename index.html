@@ -421,6 +421,51 @@ Leave a note below, or email me directly at
 </footer>
 
 </div>
+<script>
 
+function handleAsk(){
+
+const input = document.getElementById("askInput").value.toLowerCase();
+const response = document.getElementById("askResponse");
+
+let reply = "That's a good question. I haven't added a response for that yet, but feel free to ask me directly through the contact form.";
+
+if(input.includes("book") || input.includes("read")){
+reply = "I read quite a bit — mostly crime fiction, gritty novels, and thoughtful nonfiction. Don Winslow and S.A. Cosby are good examples of authors I've enjoyed.";
+}
+
+else if(input.includes("run")){
+reply = "Running is a big part of my routine. I train pretty deliberately, often focusing on structured workouts and endurance goals.";
+}
+
+else if(input.includes("nutrition") || input.includes("smoothie")){
+reply = "Nutrition is something I pay attention to alongside training. My morning smoothie includes ingredients like Ka'Chava, greens, creatine, beet powder, oats, banana, almond powder, chia seeds, and iced coffee.";
+}
+
+else if(input.includes("ski")){
+reply = "Skiing is one of my favorite winter activities. I usually ski out west when possible and enjoy exploring different mountains.";
+}
+
+else if(input.includes("travel") || input.includes("visit")){
+reply = "I enjoy travel that mixes interesting places with time outdoors — often trips that involve skiing, cities, or time with family.";
+}
+
+else if(input.includes("leadership") || input.includes("work")){
+reply = "Most of my professional focus is on helping complex organizations operate clearly — especially in housing and large-scale real estate.";
+}
+
+else if(input.includes("family")){
+reply = "Family life keeps everything grounded. Like most parents, I'm figuring things out as I go.";
+}
+
+else if(input.includes("cardinal") || input.includes("sports")){
+reply = "I follow sports a bit — including the 1985 Cardinals — though I’ll admit I probably won't add much to a hockey debate.";
+}
+
+response.innerText = reply;
+
+}
+
+</script>
 </body>
 </html>
