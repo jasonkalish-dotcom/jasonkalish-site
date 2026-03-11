@@ -1,471 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jason Kalish</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Kalish</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 
-<!-- Analytics placeholder -->
-<!--
-Future analytics script goes here.
-Example:
+  <!-- Analytics placeholder -->
+  <!--
+  Future analytics script goes here.
+  Example:
 
-<script defer data-domain="jasonkalish.co" src="https://plausible.io/js/script.js"></script>
--->
+  <script defer data-domain="jasonkalish.co" src="https://plausible.io/js/script.js"></script>
+  -->
 
-<style>
+  <style>
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 56px 24px;
+      background: #f6f4f0;
+      color: #232629;
+      font-size: 18px;
+      line-height: 1.7;
+    }
 
-body{
-font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-margin:0;
-padding:56px 24px;
-background:#f6f4f0;
-color:#232629;
-font-size:18px;
-line-height:1.7;
-}
+    .page {
+      max-width: 840px;
+      margin: 0 auto;
+      padding-left: 28px;
+      border-left: 1px solid #e2ddd4;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
 
-.page{
-max-width:840px;
-margin:0 auto;
-padding-left:28px;
-border-left:1px solid #e2ddd4;
-display:flex;
-flex-direction:column;
-gap:28px;
-}
+    .card {
+      background: #fbfaf7;
+      border: 1px solid #ebe6df;
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
 
-.card{
-background:#fbfaf7;
-border:1px solid #ebe6df;
-border-radius:20px;
-padding:32px;
-transition:transform .18s ease, box-shadow .18s ease;
-}
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    }
 
-.card:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 14px rgba(0,0,0,0.06);
-}
+    .top-band {
+      background: #fbfaf7;
+      border: 1px solid #e3ddd5;
+      border-radius: 16px;
+      padding: 18px 22px;
+    }
 
-.top-band{
-background:#fbfaf7;
-border:1px solid #e3ddd5;
-border-radius:16px;
-padding:18px 22px;
-}
+    .hero {
+      max-width: 620px;
+      padding: 32px 0 40px 6px;
+    }
 
-.hero{
-max-width:620px;
-padding:32px 0 40px 6px;
-}
+    .band-title {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6c737a;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
 
-.band-title{
-font-size:13px;
-letter-spacing:.08em;
-text-transform:uppercase;
-color:#6c737a;
-font-weight:600;
-margin-bottom:4px;
-}
+    .subtle {
+      color: #6c737a;
+      font-size: 16px;
+    }
 
-.subtle{
-color:#6c737a;
-font-size:16px;
-}
+    h1 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 56px;
+      line-height: 1.05;
+      margin: 0;
+      font-weight: 400;
+    }
 
-h1{
-font-family:'Libre Baskerville',serif;
-font-size:56px;
-line-height:1.05;
-margin:0;
-font-weight:400;
-}
+    .headline {
+      font-family: "Libre Baskerville", serif;
+      font-size: 28px;
+      margin: 10px 0 18px 0;
+      color: #2f3439;
+    }
 
-.headline{
-font-family:'Libre Baskerville',serif;
-font-size:28px;
-margin:10px 0 18px 0;
-color:#2f3439;
-}
+    p {
+      margin: 0 0 16px 0;
+      max-width: 640px;
+    }
 
-p{
-margin:0 0 16px 0;
-max-width:640px;
-}
+    h2 {
+      font-size: 22px;
+      margin: 0 0 18px 0;
+    }
 
-h2{
-font-size:22px;
-margin-bottom:18px;
-}
+    .principle {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
 
-.principle{
-display:flex;
-align-items:flex-start;
-gap:18px;
-margin-bottom:28px;
-}
+    .number {
+      font-family: "Libre Baskerville", serif;
+      font-size: 36px;
+      color: #b8b2a8;
+      min-width: 36px;
+      line-height: 1;
+      margin-top: 2px;
+    }
 
-.number{
-font-family:'Libre Baskerville',serif;
-font-size:36px;
-color:#b8b2a8;
-min-width:36px;
-line-height:1;
-margin-top:2px;
-}
+    .principle strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
 
-.principle strong{
-display:block;
-font-size:18px;
-margin-bottom:6px;
-}
+    .principle p {
+      margin: 0;
+    }
 
-.ask-summary{
-color:#4a4f55;
-}
+    .ask-summary {
+      color: #4a4f55;
+    }
 
-.ask-row{
-display:flex;
-gap:10px;
-margin-top:14px;
-flex-wrap:wrap;
-}
+    .ask-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
 
-.ask-input{
-flex:1;
-min-width:220px;
-border:1px solid #d8d2ca;
-border-radius:10px;
-padding:12px;
-font-size:15px;
-background:#fffdf9;
-}
+    .ask-input {
+      flex: 1;
+      min-width: 220px;
+      border: 1px solid #d8d2ca;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 15px;
+      background: #fffdf9;
+      box-sizing: border-box;
+    }
 
-.ask-button{
-border:1px solid #d8d2ca;
-background:#fffdf9;
-padding:10px 16px;
-border-radius:10px;
-cursor:pointer;
-font-size:15px;
-transition:transform .12s ease, box-shadow .12s ease;
-}
+    .ask-button {
+      border: 1px solid #d8d2ca;
+      background: #fffdf9;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
 
-.ask-button:hover{
-background:#f3efe8;
-transform:translateY(-1px);
-}
-.ask-response{
-margin-top:14px;
-max-width:640px;
-color:#4a4f55;
-}
-.connect-intro{
-color:#4a4f55;
-margin-bottom:18px;
-}
+    .ask-button:hover {
+      background: #f3efe8;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
 
-.connect-form{
-display:flex;
-flex-direction:column;
-gap:14px;
-max-width:620px;
-}
+    .ask-button:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
 
-.connect-form input,
-.connect-form textarea{
-border:1px solid #d8d2ca;
-border-radius:10px;
-padding:12px 14px;
-font-size:15px;
-font-family:inherit;
-background:#fffdf9;
-width:100%;
-box-sizing:border-box;
-}
+    .connect-intro {
+      color: #4a4f55;
+      margin-bottom: 18px;
+    }
 
-.connect-form textarea{
-min-height:120px;
-resize:vertical;
-}
+    .connect-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 620px;
+    }
 
-.connect-button{
-border:1px solid #d8d2ca;
-background:#fffdf9;
-padding:10px 16px;
-border-radius:10px;
-cursor:pointer;
-font-size:15px;
-transition:transform .12s ease, box-shadow .12s ease;
-}
+    .connect-form input,
+    .connect-form textarea {
+      border: 1px solid #d8d2ca;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 15px;
+      font-family: inherit;
+      background: #fffdf9;
+      width: 100%;
+      box-sizing: border-box;
+      color: #232629;
+    }
 
-.connect-button:hover{
-background:#f3efe8;
-transform:translateY(-1px);
-}
+    .connect-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
 
-.inline-link{
-color:#4f6478;
-text-decoration:none;
-font-weight:500;
-}
+    .connect-button {
+      border: 1px solid #d8d2ca;
+      background: #fffdf9;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
 
-.inline-link:hover,
-a:hover{
-text-decoration:underline;
-}
+    .connect-button:hover {
+      background: #f3efe8;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
 
-a{
-color:#4f6478;
-text-decoration:none;
-}
+    .connect-button:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
 
-.site-footer{
-margin-top:60px;
-padding-top:18px;
-border-top:1px solid #ebe6df;
-font-size:14px;
-color:#8a857d;
-margin-left:6px;
-}
+    .inline-link,
+    a {
+      color: #4f6478;
+      text-decoration: none;
+    }
 
-.footer-inner{
-display:flex;
-gap:18px;
-max-width:620px;
-align-items:center;
-flex-wrap:wrap;
-}
+    .inline-link {
+      font-weight: 500;
+    }
 
-.footer-name{
-font-weight:500;
-}
+    .inline-link:hover,
+    a:hover {
+      text-decoration: underline;
+    }
 
-.visit-counter{
-opacity:.9;
-}
+    .site-footer {
+      margin-top: 60px;
+      padding-top: 18px;
+      border-top: 1px solid #ebe6df;
+      font-size: 14px;
+      color: #8a857d;
+      margin-left: 6px;
+    }
 
-.footer-meta{
-opacity:.8;
-}
+    .footer-inner {
+      display: flex;
+      gap: 18px;
+      max-width: 620px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-@media (max-width:640px){
+    .footer-name {
+      font-weight: 500;
+    }
 
-body{
-padding:40px 18px;
-font-size:17px;
-}
+    .visit-counter {
+      opacity: 0.9;
+    }
 
-.page{
-padding-left:18px;
-}
+    .footer-meta {
+      opacity: 0.8;
+    }
 
-h1{
-font-size:42px;
-}
+    .page:hover {
+      border-left-color: #cfc7bc;
+    }
 
-.headline{
-font-size:24px;
-}
+    @media (max-width: 640px) {
+      body {
+        padding: 40px 18px;
+        font-size: 17px;
+      }
 
-.card{
-padding:24px;
-}
+      .page {
+        padding-left: 18px;
+      }
 
-.ask-row{
-flex-direction:column;
-}
+      h1 {
+        font-size: 42px;
+      }
 
-.ask-button{
-width:100%;
-}
+      .headline {
+        font-size: 24px;
+      }
 
-}
+      .card {
+        padding: 24px;
+      }
 
-</style>
+      .ask-row,
+      .connect-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
+      .ask-button,
+      .connect-button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page">
+    <div class="top-band">
+      <p class="band-title">About this site</p>
+      <p class="subtle">
+        This is a small, personal space to share a bit more about my work, how I think about things, and how I spend time outside of work.
+      </p>
+    </div>
 
-<div class="page">
+    <section class="hero">
+      <p class="subtle">Welcome</p>
 
-<div class="top-band">
-<p class="band-title">About this site</p>
-<p class="subtle">
-This is a small, personal space to share a bit more about my work, how I think about things, and how I spend time outside of work.
-</p>
-</div>
+      <h1>Jason Kalish</h1>
 
-<section class="hero">
+      <p class="headline">
+        Supporting the people who make everyday living work.
+      </p>
 
-<p class="subtle">Welcome</p>
+      <p>
+        I focus on helping complex organizations operate more clearly and effectively. My work happens in housing and large-scale real estate, where the systems behind the scenes shape everyday living.
+      </p>
 
-<h1>Jason Kalish</h1>
+      <p>
+        Outside of work I spend a lot of time running, reading, and keeping up with family life.
+      </p>
+    </section>
 
-<p class="headline">
-Supporting the people who make everyday living work.
-</p>
+    <div class="card">
+      <h2>Approach</h2>
 
-<p>
-I focus on helping complex organizations operate more clearly and effectively. My work happens in housing and large-scale real estate, where the systems behind the scenes shape everyday living.
-</p>
+      <div class="principle">
+        <div class="number">1</div>
+        <div>
+          <strong>Clarity matters in complex organizations.</strong>
+          <p>
+            When systems are large and responsibilities overlap, things work best when decision-making, accountability, and communication are clear.
+          </p>
+        </div>
+      </div>
 
-<p>
-Outside of work I spend a lot of time running, reading, and keeping up with family life.
-</p>
+      <div class="principle">
+        <div class="number">2</div>
+        <div>
+          <strong>Good systems support everyday living.</strong>
+          <p>
+            Much of my work happens in housing and large-scale real estate, where the systems behind the scenes shape how people experience daily life.
+          </p>
+        </div>
+      </div>
 
-</section>
+      <div class="principle">
+        <div class="number">3</div>
+        <div>
+          <strong>Learning improves the system.</strong>
+          <p>
+            I’m interested in practical ways people improve how they think and learn inside organizations. AI is everywhere now — sometimes real, sometimes just a label. Access isn’t the point. What matters is how thoughtfully people choose to engage with it.
+          </p>
+        </div>
+      </div>
+    </div>
 
-<div class="card">
+    <div class="card">
+      <h2>Ask</h2>
 
-<h2>Approach</h2>
+      <p class="ask-summary">
+        Books I’ve enjoyed, running and training, nutrition (including my smoothie recipe and blenders), skiing, places I’ve visited, leadership, family life — or sports, including the 1985 Cardinals (though I probably won’t be much help in a hockey debate).
+      </p>
 
-<div class="principle">
-<div class="number">1</div>
-<div>
-<strong>Clarity matters in complex organizations.</strong>
-<p>
-When systems are large and responsibilities overlap, things work best when decision-making, accountability, and communication are clear.
-</p>
-</div>
-</div>
+      <div class="ask-row">
+        <input class="ask-input" type="text" placeholder="Curious about something?" />
+        <button class="ask-button" type="button">Ask</button>
+      </div>
+    </div>
 
-<div class="principle">
-<div class="number">2</div>
-<div>
-<strong>Good systems support everyday living.</strong>
-<p>
-Much of my work happens in housing and large-scale real estate, where the systems behind the scenes shape how people experience daily life.
-</p>
-</div>
-</div>
+    <div class="card">
+      <h2>Where you can find me now</h2>
 
-<div class="principle">
-<div class="number">3</div>
-<div>
-<strong>Learning improves the system.</strong>
-<p>
-I’m interested in practical ways people improve how they think and learn inside organizations. AI is everywhere now — sometimes real, sometimes just a label. Access isn’t the point. What matters is how thoughtfully people choose to engage with it.
-</p>
-</div>
-</div>
+      <p>
+        <a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank" rel="noopener noreferrer">
+          Visit LinkedIn →
+        </a>
+      </p>
+    </div>
 
-</div>
+    <div class="card">
+      <h2>If you’d like to connect</h2>
 
-<div class="card">
+      <p class="connect-intro">
+        Leave a note below, or email me directly at
+        <a class="inline-link" href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>.
+      </p>
 
-<h2>Ask</h2>
+      <form class="connect-form">
+        <input type="text" placeholder="Your name" />
+        <input type="email" placeholder="Your email" />
+        <textarea placeholder="A short note"></textarea>
+        <button class="connect-button" type="button">Send</button>
+      </form>
+    </div>
 
-<p class="ask-summary">
-Books I’ve enjoyed, running and training, nutrition (including my smoothie recipe and blenders), skiing, places I’ve visited, leadership, family life — or sports, including the 1985 Cardinals (though I probably won’t be much help in a hockey debate).
-</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-name">Jason Kalish</span>
+        <span class="visit-counter">Site visits: —</span>
+        <span class="footer-meta">Last updated: March 2026</span>
+      </div>
+    </footer>
 
-<div class="ask-row">
-<input id="askInput" class="ask-input" type="text" placeholder="Curious about something?">
-<button class="ask-button" onclick="handleAsk()">Ask</button>
-</div>
-
-<div id="askResponse" class="ask-response subtle"></div>
-
-</div>
-
-<div class="card">
-
-<h2>Where you can find me now</h2>
-
-<p>
-<a href="https://www.linkedin.com/in/jason-kalish-3416336/" target="_blank">
-Visit LinkedIn →
-</a>
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>If you'd like to connect</h2>
-
-<p class="connect-intro">
-Leave a note below, or email me directly at
-<a class="inline-link" href="mailto:hello@jasonkalish.co">hello@jasonkalish.co</a>.
-</p>
-
-<form class="connect-form">
-
-<input type="text" placeholder="Your name">
-<input type="email" placeholder="Your email">
-<textarea placeholder="A short note"></textarea>
-
-<button class="connect-button">Send</button>
-
-</form>
-
-</div>
-
-<footer class="site-footer">
-
-<div class="footer-inner">
-
-<span class="footer-name">Jason Kalish</span>
-<span class="visit-counter">Site visits: —</span>
-<span class="footer-meta">Last updated: March 2026</span>
-
-</div>
-
-</footer>
-
-</div>
-<script>
-
-function handleAsk(){
-
-const input = document.getElementById("askInput").value.toLowerCase();
-const response = document.getElementById("askResponse");
-
-let reply = "That's a good question. I haven't added a response for that yet, but feel free to ask me directly through the contact form.";
-
-if(input.includes("book") || input.includes("read")){
-reply = "I read pretty widely — gritty crime fiction, classic literature, historical epics, behavioral economics, decision science, and narrative nonfiction. On the fiction side, I’ve spent a lot of time with writers like Don Winslow, S.A. Cosby, Lehane, and Connelly, but I also value writers like Steinbeck, Dostoevsky, Baldwin, Ishiguro, and Hemingway. Slaughterhouse-Five is one of my favorite books.";
-}
-
-else if(input.includes("run")){
-reply = "Running is a big part of my routine. I train pretty deliberately, often focusing on structured workouts and endurance goals.";
-}
-
-else if(input.includes("nutrition") || input.includes("smoothie")){
-reply = "Nutrition is something I pay attention to alongside training. My morning smoothie includes ingredients like Ka'Chava, greens, creatine, beet powder, oats, banana, almond powder, chia seeds, and iced coffee.";
-}
-
-else if(input.includes("ski")){
-reply = "Skiing is one of my favorite winter activities. I usually ski out west when possible and enjoy exploring different mountains.";
-}
-
-else if(input.includes("travel") || input.includes("visit")){
-reply = "I enjoy travel that mixes interesting places with time outdoors — often trips that involve skiing, cities, or time with family.";
-}
-
-else if(input.includes("leadership") || input.includes("work")){
-reply = "Most of my professional focus is on helping complex organizations operate clearly — especially in housing and large-scale real estate.";
-}
-
-else if(input.includes("family")){
-reply = "Family life keeps everything grounded. Like most parents, I'm figuring things out as I go.";
-}
-
-else if(input.includes("cardinal") || input.includes("sports")){
-reply = "I follow sports a bit — though I’ll admit I probably won't add much to a hockey debate.";
-}
-
-response.innerText = reply;
-
-}
-
-</script>
+    <div id="site-analytics" style="display:none;"></div>
+  </div>
 </body>
 </html>
